@@ -2,6 +2,21 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <style>
+
+    label {
+       text-align: left;
+       margin-right:25px;
+       width:75px;
+    }
+    input {
+      border-radius: 2px;
+      border: 1px solid lightgray;
+      width: calc(100% - 125px);
+      float:right;
+    }
+
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -12,13 +27,13 @@
 	<link href="../resources/css/my_style.css" rel="stylesheet">
   </head>
   <body>
-	
+
 	<img src="../resources/img/beproudcapaabanner.jpg" class="img-fluid" alt="Registration Page Banner for CU Football">
     <br>
 	<br>
 	<div class="container">
-		<form action="home.html">
-			<!--
+		<form class = "form-inline" action="home.html">
+      <!--
 				Todo: Create a form with the following fields:
 					1. Name Text Field
 					2. Email Text Field
@@ -33,7 +48,56 @@
 					11. Submit Button (links to home page)
 
 			-->
-			<input type="submit" value="submit" class="btn btn-primary btn-block">
+         <label for="label">Full Name</label>
+         <input type="text" name="my_text_field" placeholder="Enter Name">
+
+         <label for="label">Email Address</label>
+         <input type="text" name="my_text_field" placeholder="Enter Email">
+
+         <label for="label">Password</label>
+         <input type="text" name="my_text_field" placeholder="Password">
+
+         <label for="label">Confirm Password</label>
+         <input type="text" name="my_text_field" placeholder="Confirm Password">
+
+
+        <div class="form-check">
+    		    <label>CU Boulder Alumni </label>
+    		    <input class="form-check-input" type="radio" name="yesAlumni" id="yesAlumni" value="option1">
+    		    <label class="form-check-label" for="yesAlumni"> Yes </label>
+            <input class="form-check-input" type="radio" name="noAlumni" id="noAlumni" value="option2">
+            <label class="form-check-label" for="noAlumni">No</label>
+            <label>CU Boulder Student </label>
+    		    <input class="form-check-input" type="radio" name="yesStudent" id="yesStudent" value="option1">
+    		    <label class="form-check-label" for="yesStudent"> Yes </label>
+            <input class="form-check-input" type="radio" name="noStudent" id="noStudent" value="option2">
+            <label class="form-check-label" for="noStudent">No</label>
+        </div>
+
+
+          <div class="form-check">
+            <label>Student Status</label>
+            <input class="form-check-input" type="radio" name="yesStudent" id="yesStudent" value="option1" selected>
+            <label class="form-check-label" for="yesStudent"> Undergrad </label>
+            <select name="status">
+              <option value="" selected disabled>Select Student Status</option>
+              <option value="Freshman">Freshman</option>
+              <option value="Sophomore">Sophomore</option>
+              <option value="Junior">Junior</option>
+              <option value="Senior">Senior</option>
+            </select>
+            <input class="form-check-input" type="radio" name="grad" id="grad" value="option1">
+            <label class="form-check-label" for="grad"> Grad </label>
+            <select name="status">
+              <option value="" selected disabled>Select Student Status</option>
+              <option value="MA">MA</option>
+              <option value="MBA"><MBA</option>
+              <option value="pHD">pHD</option>
+            </select>
+          </div>
+
+
+			<input type="submit" value="submit" class="btn btn-primary btn-block" align="middle">
 		</form>
 	</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
